@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name= "mediumblue">#0000CD</color>
+    <color name="royalblue">#4169E1</color>
+    <color name="blue">#0000FF</color>
+    <color name="bluelogo">#0251AD</color>
+    <color name="white"> #FFFFFF</color>
+    <color name="coral">#FF7F50</color>
+
 </resources>
