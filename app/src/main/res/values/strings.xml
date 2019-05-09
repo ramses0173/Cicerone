@@ -1,15 +1,37 @@
 <resources>
     <string name="app_name">Cicerone</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="immaginesplash">imageSplash</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_password">MainActivity</string>
+    <string name="title_activity_registration">MainActivity</string>
+
+    <!-- login and registration activity-->
+    <string name="etUsername">Username</string>
+    <string name="etName">Username</string>
+    <string name="etUserEmail">E-mail</string>
+    <string name="etUserPassword">Password</string>
+    <string name="registrazione">SIGN UP</string>
+    <string name="btnRegister">Create new account</string>
+    <string name="Welcome">Welcome back!</string>
+    <string name="Welcome2">Let\'s get started!</string>
+    <string name="tvUserLogin">Login</string>
+    <string name="Register">Aren\'t you registered?</string>
+    <string name="CompleteRegistration">  Complete your registration  </string>
+    <string name="Login">Are you registered yet?</string>
+    <string name="Register2">Sign up now</string>
+    <string name="Messaggio">By clicking "Create New Account", it will send you a verification email</string>
+    <string name="Toast1">Enter email!</string>
+    <string name="Toast2">Enter password!</string>
+    <string name="TstPassShort">Password is too short(at least 6 characters)</string>
+    <string name="Authenticationf">Authentication failed</string>
+    <string name="Successful">Login successful</string>
+    <string name="NotVerified">Email is not verified yet</string>
+    <string name="ForgotPassword">Forgot password?</string>
+    <string name="ResetPassword">Reset Password</string>
+    <string name="Description">Enter your registration email and we will send you a link in order to reset your password</string>
+    <string name="Emailsent">Email sent</string>
+    <string name="EmailNotRegistered">This email is not registered</string>
+    <string name="NotifyApproved">Your account has been approved</string>
+
+
 </resources>
