@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cicerone</string>
+    <string name="immaginesplash">ImmagineSplash</string>
+
+    <!-- login and registration activity-->
+    <string name="etUserEmail">E-mail</string>
+    <string name="etUserPassword">Password</string>
+    <string name="registrazione">REGISTRAZIONE</string>
+    <string name="btnRegister">Registra</string>
+    <string name="Welcome">Bentornato!</string>
+    <string name="Welcome2">Let\'s get started</string>
+    <string name="tvUserLogin">Login</string>
+    <string name="Register">Non sei registrato?</string>
+    <string name="Login">Sei già registrato?</string>
+    <string name="Register2">Crea nuovo account</string>
+    <string name="CompleteRegistration">  Completa la tua registrazione  </string>
+    <string name="Messaggio">Cliccando su Crea nuovo account le verrà inviata un\'email di verifica</string>
+    <string name="Toast1">Inserire email!</string>
+    <string name="Toast2">Inserire password!</string>
+    <string name="TstPassShort">La passwrod è troppo corta(almeno 6 caratteri)</string>
+    <string name="Authenticationf">Autenticazione fallita</string>
+    <string name="Successful">Login effettuato con successo</string>
+    <string name="NotVerified">L\'email non è stata ancora verificata</string>
+    <string name="ForgotPassword">Password dimenticata?</string>
+    <string name="ResetPassword">Recupera Password</string>
+    <string name="Description">Inserisci l\'email con la quale ti sei registrato e ti invieremo un link per rempoistare la tua password </string>
+    <string name="Emailsent">Email inviata</string>
+    <string name="EmailNotRegistered">Questa email non è registrata</string>
+
+</resources>
