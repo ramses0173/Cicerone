@@ -4,6 +4,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_password">MainActivity</string>
     <string name="title_activity_registration">MainActivity</string>
+    <string name="welcome">Welcome to Cicerone!</string>
 
     <!-- login and registration activity-->
     <string name="etUsername">Username</string>
@@ -32,6 +33,7 @@
     <string name="Emailsent">Email sent</string>
     <string name="EmailNotRegistered">This email is not registered</string>
     <string name="NotifyApproved">Your account has been approved</string>
+    <string name="Failure">Registration not successful</string>
 
 
 </resources>
