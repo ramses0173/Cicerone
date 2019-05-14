@@ -30,8 +30,8 @@
             android:background="@drawable/edittext_shape"
             android:paddingBottom="20dp"
             android:paddingLeft="15dp"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
 
             />
     </android.support.design.widget.TextInputLayout>
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_email"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#fff">
+        app:passwordToggleTint="#ffffff">
 
         <EditText
             android:id="@+id/password"
@@ -64,8 +64,8 @@
             android:paddingBottom="20dp"
             android:paddingLeft="15dp"
             android:paddingStart="15dp"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -91,7 +91,7 @@
         android:background="@drawable/button_shape"
         android:backgroundTint="@color/colorPrimary"
         android:text="@string/Register2"
-        android:textColor="#ffff"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

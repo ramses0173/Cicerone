@@ -34,6 +34,21 @@
     <string name="EmailNotRegistered">This email is not registered</string>
     <string name="NotifyApproved">Your account has been approved</string>
     <string name="Failure">Registration not successful</string>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="search">Search</string>
+    <string name="add_event">Add Event</string>
+    <string name="event">Event</string>
+    <string name="profile">Profile</string>
+    <string name="create_a_new_activity">Create a new activity</string>
+    <string name="activity">Activity</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity">Activity</string>
+    <string name="title_create_activity">Create Activity</string>
+    <string name="title_search">Search activity</string>
+    <string name="title_activity_create_event">CreateEventActivity</string>
 
 
 </resources>

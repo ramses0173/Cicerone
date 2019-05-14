@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/iconricerca24"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/navigation_add_event"
+        android:icon="@drawable/iconcalendariopiu24"
+        android:title="@string/create_a_new_activity" />
+
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/iconcalendario24"
+        android:title="@string/activity" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/profile" />
+</menu>

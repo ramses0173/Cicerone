@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cicerone">
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -14,6 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".CreateEventActivity" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".BottomNavigation"
+            android:label="@string/title_activity_bottom_navigation" />
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".SplashActivity"
@@ -27,7 +34,7 @@
         </activity>
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".PasswordActivity"></activity>
+        <activity android:name=".PasswordActivity" />
     </application>
 
 </manifest>
