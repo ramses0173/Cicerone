@@ -121,7 +121,7 @@ public class LoginActivity extends AppCompatActivity  {
             finish();
         } else{
             progressBar.setVisibility(View.INVISIBLE);
-            Toast.makeText(LoginActivity.this, "Lìemail non è stata verificata", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "L'email non è stata verificata", Toast.LENGTH_SHORT).show();
         }
     }}
 
