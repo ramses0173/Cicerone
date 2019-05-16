@@ -15,12 +15,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EventActivity"></activity>
         <activity android:name=".CreateEventActivity" />
-        <activity android:name=".AddActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity
-            android:name=".BottomNavigation"
-            android:label="@string/title_activity_bottom_navigation" />
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".SplashActivity"

@@ -50,5 +50,10 @@
     <string name="title_search">Search activity</string>
     <string name="title_activity_create_event">CreateEventActivity</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_activity">My Activity</string>
+    <string name="are_you_ready">Are you ready?</string>
+
 
 </resources>
