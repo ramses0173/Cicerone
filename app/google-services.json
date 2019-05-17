@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "428050556002",
-    "firebase_url": "https://cicerone-35222.firebaseio.com",
-    "project_id": "cicerone-35222",
-    "storage_bucket": "cicerone-35222.appspot.com"
+    "project_number": "275319194457",
+    "firebase_url": "https://cicerone-4bf18.firebaseio.com",
+    "project_id": "cicerone-4bf18",
+    "storage_bucket": "cicerone-4bf18.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:428050556002:android:78d602972ae19fce",
+        "mobilesdk_app_id": "1:275319194457:android:78d602972ae19fce",
         "android_client_info": {
           "package_name": "com.example.cicerone"
         }
       },
       "oauth_client": [
         {
-          "client_id": "428050556002-pjin3vij9knu7sktml9fhkob4ipgsupj.apps.googleusercontent.com",
+          "client_id": "275319194457-8ufnivimr9iivok846k2b7ah3gje30mp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cicerone",
+            "certificate_hash": "4ed086427ad602cefd275f8842f594ac041e844c"
+          }
+        },
+        {
+          "client_id": "275319194457-rrmojsh1ar5cu0bu0ggfqec0id5mur7c.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAuQ7wE6CK8VuzggMirDDpzVtq26GRivK8"
+          "current_key": "AIzaSyDcQ4Bn2w23Iz7igTm5UHSsN3IW3aDQZwI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "428050556002-pjin3vij9knu7sktml9fhkob4ipgsupj.apps.googleusercontent.com",
+              "client_id": "275319194457-iqvjtpllgl95uvjnda7srv1scl56e8b4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
