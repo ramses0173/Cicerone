@@ -33,7 +33,8 @@
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
 
-            />
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"/>
     </android.support.design.widget.TextInputLayout>
 
 
@@ -63,6 +64,7 @@
             android:inputType="textPassword"
             android:paddingBottom="20dp"
             android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:paddingStart="15dp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff" />
@@ -78,7 +80,9 @@
         android:layout_marginStart="85dp"
         app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="79dp"
+        android:layout_marginLeft="85dp" />
 
     <Button
         android:id="@+id/Reg2"
@@ -91,7 +95,8 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/Register"
@@ -104,7 +109,8 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="lollipop" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -116,7 +122,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/immaginesplash" />
 
     <TextView
         android:id="@+id/name_app"

@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,28 +18,38 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
+        //I added this if statement to keep the selected fragment when rotating the device
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new SearchEventMainFragment()).commit();
+        }
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
+
                     switch (item.getItemId()) {
                         case R.id.navigation_search:
                             selectedFragment = new SearchEventMainFragment();
-                            return true;
+                            break;
                         case R.id.navigation_add_event:
                             selectedFragment = new AddEventMainFragment();
-                            return true;
+                            break;
                         case R.id.navigation_event:
                             selectedFragment = new MyEventMainFragment();
-                            return true;
+                            break;
                         case R.id.navigation_profile:
                             selectedFragment = new ProfileMainFragment();
-                            return true;
+                            break;
                     }
-                    return false;
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
                 }
             };
-
 }

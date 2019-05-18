@@ -10,7 +10,6 @@
         android:id="@+id/navigation_add_event"
         android:icon="@drawable/iconcalendariopiu24"
         android:title="@string/create_a_new_activity" />
-
     <item
         android:id="@+id/navigation_event"
         android:icon="@drawable/iconcalendario24"
