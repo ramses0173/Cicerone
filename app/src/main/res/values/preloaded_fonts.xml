@@ -3,6 +3,5 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/arapey_italic</item>
         <item>@font/keania_one</item>
-        <item>@font/roman</item>
     </array>
 </resources>
