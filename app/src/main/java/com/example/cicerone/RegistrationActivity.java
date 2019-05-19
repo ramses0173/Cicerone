@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.cicerone.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -21,8 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegistrationActivity extends AppCompatActivity {
-    private TextInputLayout layout_email,layout_password;
-    private EditText inputEmail,inputPassword;
+    private TextInputLayout layout_email,layout_password,layout_name,layout_surname;
+    private EditText inputEmail,inputPassword,inputName,inputSurname;
     private Button SignUp;
     private FirebaseAuth mAuth;
     private static final String TAG = "RegistrationActivity";
@@ -36,22 +37,39 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
 
-        SignUp = (Button)findViewById(R.id.Reg2);
-        inputEmail = (EditText)findViewById(R.id.email);
-        inputPassword = (EditText)findViewById(R.id.password);
-        layout_password= (TextInputLayout) findViewById(R.id.layout_signup_password) ;
-        layout_email=(TextInputLayout) findViewById(R.id.layout_signup_email) ;
+        SignUp = findViewById(R.id.Reg2);
+        inputName = findViewById(R.id.name);
+        inputSurname = findViewById(R.id.surname);
+        inputEmail = findViewById(R.id.email);
+        inputPassword = findViewById(R.id.password);
+        layout_name =findViewById(R.id.layout_signup_name);
+        layout_surname =findViewById(R.id.layout_signup_surname);
+        layout_password=  findViewById(R.id.layout_signup_password) ;
+        layout_email= findViewById(R.id.layout_signup_email)
+        ;
 
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
+                final String name = inputName.getText().toString().trim();
+                final String surname = inputSurname.getText().toString().trim();
 
                 if (email.isEmpty()) {
                     layout_email.setError(getResources().getString(R.string.Toast1));
                     layout_email.requestFocus();
                     return;}
+                if(name.isEmpty()){
+                    layout_name.setError(getResources().getString(R.string.errorName));
+                    layout_name.requestFocus();
+                    return;
+                }
+                if(surname.isEmpty()){
+                    layout_surname.setError(getResources().getString(R.string.errorSurname));
+                    layout_surname.requestFocus();
+                    return;
+                }
 
                 if (password.isEmpty()) {
                     layout_password.setError(getResources().getString(R.string.Toast2));
@@ -83,7 +101,10 @@ public class RegistrationActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(RegistrationActivity.this, R.string.Emailsent, Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
+                                        Intent goToLogin = new Intent(RegistrationActivity.this,LoginActivity.class);
+                                        goToLogin.putExtra("name",name);
+                                        goToLogin.putExtra("surname",surname);
+                                        startActivity(goToLogin);
                                         finish();
                                     }
                                 }
@@ -97,7 +118,9 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-    }}
+    }
+
+}
 
 
 

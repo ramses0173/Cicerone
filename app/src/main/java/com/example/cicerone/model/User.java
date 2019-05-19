@@ -1,19 +1,19 @@
 package com.example.cicerone.model;
 
 public class User {
+    String uid;
     String nome;
     String cognome;
     String datanascita;
     String fotoprofilo;
     String sesso;
     String email;
-    String password;
 
-    public User(String nome, String cognome, String email, String password) {
+    public User(String nome, String cognome, String email, String uid) {
+        this.uid = uid;
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
-        this.password = password;
     }
 
     public String getNome() {
@@ -64,11 +64,5 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+   
 }

@@ -11,40 +11,101 @@
         android:id="@+id/layout_signup_email"
         android:layout_width="305dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="88dp"
-        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="40dp"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
         app:layout_constraintBottom_toTopOf="@+id/layout_signup_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/layout_signup_surname">
+
         <EditText
             android:id="@+id/email"
             android:layout_width="302dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_shape"
             android:ems="10"
             android:hint="@string/etUserEmail"
             android:inputType="textEmailAddress"
-            android:background="@drawable/edittext_shape"
-            android:textCursorDrawable="@color/colorPrimaryDark"
-            android:paddingLeft="15dp"
             android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            />
+            android:textCursorDrawable="@color/colorPrimaryDark" />
     </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_signup_name"
+        android:layout_width="305dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/layout_signup_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="302dp"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_shape"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textCursorDrawable="@color/colorPrimaryDark" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_signup_surname"
+        android:layout_width="305dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="40dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/layout_signup_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_signup_name">
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="302dp"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_shape"
+            android:ems="10"
+            android:hint="@string/surname"
+            android:inputType="text"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textCursorDrawable="@color/colorPrimaryDark" />
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/layout_signup_password"
         android:layout_width="305dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:textColor="#ffffff"
@@ -52,25 +113,26 @@
         app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
         app:layout_constraintBottom_toTopOf="@+id/Reg2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_signup_email"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="#fff">
+
         <EditText
             android:id="@+id/password"
             android:layout_width="302dp"
-            android:layout_height="wrap_content"
-            android:textCursorDrawable="@color/colorPrimaryDark"
+            android:layout_height="60dp"
             android:background="@drawable/edittext_shape"
             android:ems="10"
             android:hint="@string/etUserPassword"
             android:inputType="textPassword"
-            android:paddingStart="15dp"
             android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
             android:textColor="#fff"
             android:textColorHint="#fff"
-            android:paddingLeft="15dp" />
+            android:textCursorDrawable="@color/colorPrimaryDark" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -102,12 +164,14 @@
         android:layout_marginStart="85dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:textColor="#ffffff"
         android:text="@string/Messaggio"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Reg2"
+        app:layout_constraintVertical_bias="1.0"
         android:layout_marginRight="84dp"
         android:layout_marginLeft="85dp" />
 

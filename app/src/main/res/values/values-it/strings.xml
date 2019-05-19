@@ -8,8 +8,8 @@
     <!-- login and registration activity-->
     <string name="etUsername">Username</string>
     <string name="etName">Username</string>
-    <string name="etUserEmail">E-mail</string>
-    <string name="etUserPassword">Password</string>
+    <string name="etUserEmail">E-MAIL</string>
+    <string name="etUserPassword">PASSWORD</string>
     <string name="registrazione">REGISTRATI</string>
     <string name="btnRegister">Crea un nuovo account</string>
     <string name="Welcome">Bentornato!</string>
@@ -22,6 +22,8 @@
     <string name="Messaggio">Cliccando su Crea Nuovo Account ti verrà inviata un email di verifica</string>
     <string name="Toast1">Inserisci email!</string>
     <string name="Toast2">Inserisci password!</string>
+    <string name="errorName">Inserisci il tuo nome!</string>
+    <string name="errorSurname">Inserisci il tuo cognome!</string>
     <string name="TstPassShort">Password troppo corta(almeno 6 caratteri)</string>
     <string name="Authenticationf">Login fallito</string>
     <string name="Successful">Login avvenuto con successo</string>
@@ -33,4 +35,7 @@
     <string name="EmailNotRegistered">Questa email è già stata registrata</string>
     <string name="NotifyApproved">Il tuo account è stato approvato</string>
     <string name="Failure">La registrazione non ha avuto successo</string>
+
+    <string name="name">NOME</string>
+    <string name="surname">COGNOME</string>
 </resources>

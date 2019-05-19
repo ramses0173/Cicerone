@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
+import com.example.cicerone.model.User;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -29,7 +30,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class LoginActivity extends AppCompatActivity  {
@@ -45,6 +46,8 @@ public class LoginActivity extends AppCompatActivity  {
     private TextView resetPassword;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
+    private FirebaseAuth authInstance = FirebaseAuth.getInstance();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     GoogleApiClient mGoogleApiClient;
 
 
@@ -53,6 +56,7 @@ public class LoginActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        authInstance.signOut();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -153,13 +157,26 @@ public class LoginActivity extends AppCompatActivity  {
     private void checkIfEmailVerified(){
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user.isEmailVerified()){
-            Toast.makeText(LoginActivity.this, "Email verificata", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity.this,MainActivity.class));
-            finish();
-        } else{
-            progressBar.setVisibility(View.INVISIBLE);
-            Toast.makeText(LoginActivity.this, "L'email non è stata verificata", Toast.LENGTH_SHORT).show();
+        if (user != null) {
+            if(user.isEmailVerified()){
+                Toast.makeText(LoginActivity.this, "Email verificata", Toast.LENGTH_SHORT).show();
+                addUserToDatabase(user);
+                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                finish();
+            } else{
+                progressBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(LoginActivity.this, "L'email non è stata verificata", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void addUserToDatabase(FirebaseUser userAuth) {
+        Intent receive = getIntent();
+        if(receive != null){
+        String nome = receive.getStringExtra("name");
+        String cognome = receive.getStringExtra("surname");
+        User userDatabase = new User(nome,cognome,userAuth.getEmail(),userAuth.getUid());
+        db.collection("utenti").document(userAuth.getUid()).set(userDatabase);
         }
     }
 
@@ -171,7 +188,7 @@ public class LoginActivity extends AppCompatActivity  {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+    private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
@@ -179,6 +196,15 @@ public class LoginActivity extends AppCompatActivity  {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                             String uid = mAuth.getCurrentUser().getUid();
+                             String email = mAuth.getCurrentUser().getEmail();
+                             String name = acct.getGivenName();
+                             String surname = acct.getFamilyName();
+                             String photoUrl = acct.getPhotoUrl().toString();
+                            User user = new User(name,surname,email,uid);
+                            user.setFotoprofilo(photoUrl);
+                            db.collection("utenti").document(uid).set(user);
+
                             Toast.makeText(LoginActivity.this, "autenticazione avvenuta con successo", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
 

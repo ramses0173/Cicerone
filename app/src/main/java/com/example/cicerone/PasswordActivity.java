@@ -25,8 +25,6 @@ public class PasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password);
-        getSupportActionBar().setTitle(R.string.ResetPassword);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         description = (TextView)findViewById(R.id.tvDescription);
         emailReset = (EditText)findViewById(R.id.etPassEmail);

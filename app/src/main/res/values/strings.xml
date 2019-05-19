@@ -9,8 +9,8 @@
     <!-- login and registration activity-->
     <string name="etUsername">Username</string>
     <string name="etName">Username</string>
-    <string name="etUserEmail">E-mail</string>
-    <string name="etUserPassword">Password</string>
+    <string name="etUserEmail">E-MAIL</string>
+    <string name="etUserPassword">PASSWORD</string>
     <string name="registrazione">SIGN UP</string>
     <string name="btnRegister">Create new account</string>
     <string name="Welcome">Welcome back!</string>
@@ -23,6 +23,8 @@
     <string name="Messaggio">By clicking "Create New Account", it will send you a verification email</string>
     <string name="Toast1">Enter email!</string>
     <string name="Toast2">Enter password!</string>
+    <string name="errorName">Enter Your Name!</string>
+    <string name="errorSurname">Enter Your Surname!</string>
     <string name="TstPassShort">Password is too short(at least 6 characters)</string>
     <string name="Authenticationf">Authentication failed</string>
     <string name="Successful">Login successful</string>
@@ -42,7 +44,7 @@
     <string name="add_event">Add Event</string>
     <string name="event">Event</string>
     <string name="profile">Profile</string>
-    <string name="create_a_new_activity">Create a new activity</string>
+    <string name="create_a_new_activity">Create new Event</string>
     <string name="activity">Activity</string>
     <string name="title_profile">Profile</string>
     <string name="title_activity">Activity</string>
@@ -52,8 +54,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="my_activity">My Activity</string>
+    <string name="my_activity">My Event</string>
     <string name="are_you_ready">Are you ready?</string>
+
+    <!--Profile -->
+    <string name="name">NAME</string>
+    <string name="surname">SURNAME</string>
 
 
 </resources>
