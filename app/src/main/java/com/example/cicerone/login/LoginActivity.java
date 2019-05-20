@@ -1,4 +1,4 @@
-package com.example.cicerone;
+package com.example.cicerone.login;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
+import com.example.cicerone.MainActivity;
+import com.example.cicerone.PasswordActivity;
+import com.example.cicerone.RegistrationActivity;
 import com.example.cicerone.model.User;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -32,18 +35,16 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+/**
+ * Visualizza la schermata di Login
+ */
 
-public class LoginActivity extends AppCompatActivity  {
+public class LoginActivity extends AppCompatActivity implements LoginInterface.MvpView  {
 
-    private SignInButton signin;
     static final int RC_SIGN_IN=1;
-    private GoogleSignInClient mGoogleSignInClient;
 
     private EditText inputEmail, inputPassword;
     private TextInputLayout layout_email,layout_password;
-    private Button btnLogin;
-    private Button register;
-    private TextView resetPassword;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     private FirebaseAuth authInstance = FirebaseAuth.getInstance();
@@ -60,16 +61,16 @@ public class LoginActivity extends AppCompatActivity  {
 
         mAuth = FirebaseAuth.getInstance();
 
-        signin = findViewById(R.id.sign_in_button);
+        SignInButton signin = findViewById(R.id.sign_in_button);
         inputEmail = findViewById(R.id.email);
         inputPassword = findViewById(R.id.password);
         layout_password= findViewById(R.id.layout_password) ;
         layout_email= findViewById(R.id.layout_email) ;
-        resetPassword= findViewById(R.id.tvForgotPassword);
-        btnLogin =findViewById(R.id.Reg2);
+        TextView resetPassword = findViewById(R.id.tvForgotPassword);
+        Button btnLogin = findViewById(R.id.Reg2);
         progressBar= findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.INVISIBLE);
-        register = findViewById(R.id.Register);
+        Button register = findViewById(R.id.Register);
 
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -100,7 +101,7 @@ public class LoginActivity extends AppCompatActivity  {
         mGoogleApiClient.connect();
 
         // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override

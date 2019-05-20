@@ -1,21 +1,18 @@
 package com.example.cicerone;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.cicerone.model.User;
+import com.example.cicerone.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +21,6 @@ import com.google.firebase.auth.FirebaseUser;
 public class RegistrationActivity extends AppCompatActivity {
     private TextInputLayout layout_email,layout_password,layout_name,layout_surname;
     private EditText inputEmail,inputPassword,inputName,inputSurname;
-    private Button SignUp;
     private FirebaseAuth mAuth;
     private static final String TAG = "RegistrationActivity";
 
@@ -37,7 +33,7 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
 
-        SignUp = findViewById(R.id.Reg2);
+        Button signUp = findViewById(R.id.Reg2);
         inputName = findViewById(R.id.name);
         inputSurname = findViewById(R.id.surname);
         inputEmail = findViewById(R.id.email);
@@ -48,7 +44,7 @@ public class RegistrationActivity extends AppCompatActivity {
         layout_email= findViewById(R.id.layout_signup_email)
         ;
 
-        SignUp.setOnClickListener(new View.OnClickListener() {
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = inputEmail.getText().toString().trim();
@@ -96,19 +92,21 @@ public class RegistrationActivity extends AppCompatActivity {
                         } else {
                             //manda email di verifica e poi ritorna sulla login page
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()){
-                                        Toast.makeText(RegistrationActivity.this, R.string.Emailsent, Toast.LENGTH_SHORT).show();
-                                        Intent goToLogin = new Intent(RegistrationActivity.this,LoginActivity.class);
-                                        goToLogin.putExtra("name",name);
-                                        goToLogin.putExtra("surname",surname);
-                                        startActivity(goToLogin);
-                                        finish();
+                            if (user != null) {
+                                user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(RegistrationActivity.this, R.string.Emailsent, Toast.LENGTH_SHORT).show();
+                                            Intent goToLogin = new Intent(RegistrationActivity.this,LoginActivity.class);
+                                            goToLogin.putExtra("name",name);
+                                            goToLogin.putExtra("surname",surname);
+                                            startActivity(goToLogin);
+                                            finish();
+                                        }
                                     }
-                                }
-                            });
+                                });
+                            }
                         }
                     }
 

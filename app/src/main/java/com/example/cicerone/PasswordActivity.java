@@ -10,14 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cicerone.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PasswordActivity extends AppCompatActivity {
-    private TextView description;
     private EditText emailReset;
-    private Button resetPass;
     private FirebaseAuth user;
 
 
@@ -26,9 +25,9 @@ public class PasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password);
 
-        description = (TextView)findViewById(R.id.tvDescription);
+        TextView description = (TextView) findViewById(R.id.tvDescription);
         emailReset = (EditText)findViewById(R.id.etPassEmail);
-        resetPass = (Button)findViewById(R.id.ResetPass);
+        Button resetPass = (Button) findViewById(R.id.ResetPass);
         user = FirebaseAuth.getInstance();
 
         resetPass.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +37,7 @@ public class PasswordActivity extends AppCompatActivity {
                 if (userEmail.isEmpty()) {
                     emailReset.setError(getResources().getString(R.string.Toast1));
                     emailReset.requestFocus();
-                    return;}
+                }
                 else{
                     user.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

@@ -17,7 +17,7 @@
         <activity android:name=".CreateEventActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".login.LoginActivity" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"

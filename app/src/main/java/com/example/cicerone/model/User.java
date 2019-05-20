@@ -1,13 +1,13 @@
 package com.example.cicerone.model;
 
 public class User {
-    String uid;
-    String nome;
-    String cognome;
-    String datanascita;
-    String fotoprofilo;
-    String sesso;
-    String email;
+    private String uid;
+    private String nome;
+    private String cognome;
+    private String datanascita;
+    private String fotoprofilo;
+    private String sesso;
+    private String email;
 
     public User(String nome, String cognome, String email, String uid) {
         this.uid = uid;
@@ -64,5 +64,12 @@ public class User {
         this.email = email;
     }
 
-   
+    public String getUid(){
+        return uid;
+    }
+    public void setUid(String uid){
+        this.uid = uid;
+    }
+
+
 }
