@@ -1,4 +1,4 @@
-package com.example.cicerone;
+package com.example.cicerone.main;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -6,6 +6,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.example.cicerone.AddEventMainFragment;
+import com.example.cicerone.MyEventMainFragment;
+import com.example.cicerone.ProfileMainFragment;
+import com.example.cicerone.SearchEventMainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

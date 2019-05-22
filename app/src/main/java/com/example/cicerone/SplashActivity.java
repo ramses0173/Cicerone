@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Bundle;
 
 import com.example.cicerone.login.LoginActivity;
+import com.example.cicerone.main.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

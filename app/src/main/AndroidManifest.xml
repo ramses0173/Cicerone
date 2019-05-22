@@ -13,13 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EventActivity"></activity>
-        <activity android:name=".CreateEventActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".login.LoginActivity" />
+        <activity android:name="com.example.cicerone.EventActivity" />
+        <activity android:name="com.example.cicerone.CreateEventActivity" />
+        <activity android:name="com.example.cicerone.SearchActivity" />
+        <activity android:name="com.example.cicerone.ProfileActivity" />
+        <activity android:name="com.example.cicerone.login.LoginActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.example.cicerone.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
@@ -28,9 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".PasswordActivity" />
+        <activity android:name="com.example.cicerone.registration.RegistrationActivity" />
+        <activity android:name="com.example.cicerone.main.MainActivity" />
+        <activity android:name="com.example.cicerone.resetPass.PasswordActivity" />
     </application>
 
 </manifest>

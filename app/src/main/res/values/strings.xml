@@ -60,6 +60,7 @@
     <!--Profile -->
     <string name="name">NAME</string>
     <string name="surname">SURNAME</string>
+    <string name="Auth_Failed">authentication failed</string>
 
 
 </resources>
